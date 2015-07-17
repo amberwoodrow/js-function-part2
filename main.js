@@ -32,12 +32,13 @@ function longestWord (str) {
   var array = str.split(" "); // str to array
   var longestWordOfString = ""; // stores the longest word of the array
   for (i in array) { // iterates through array
-    array[i] = array[i].replace(/[^A-Za-z0-9_ ]/g, ''); // replaces punctuation with an empty string.
+    array[i] = array[i].replace(/[^A-Za-z0-9 ]/g, ''); // replaces punctuation with an empty string.
     if (longestWordOfString.length < array[i].length) { // calulates longest word
       longestWordOfString = array[i]; // pushes string to longestWordOfString
     }
   }
-  return "Original string: " + string + "Longest word: " + longestWordOfString;
+  return "Original string with no punctuation: '" + array.join(" ") + "'\nLongest word: "
+   + longestWordOfString;
 }
 console.log(longestWord(string));
 

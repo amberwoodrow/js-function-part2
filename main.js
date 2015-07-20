@@ -43,8 +43,8 @@ function longestWord (str) {
 console.log(longestWord(string));
 
 
-// Now homework to finish on our own.
-// 4.
+Now homework to finish on our own.
+4.
 console.log("---Factorial---")
 function factorial (num) {
   var factorialSum = 1;
@@ -58,12 +58,23 @@ function factorial (num) {
   return "!" + num + " is: " + factorialSum;
 }
 
+// Pete Jeffryes Solution for #4 Factorial, using recursion
+function factorial (n) {
+  if(n === 0){
+    return 0;
+  } else {
+    return (n * factorial(n-1));
+  }
+};
+console.log(factorial(5));
+
+
 console.log(factorial(3));
 console.log(factorial(1));
 console.log(factorial(0));
 console.log(factorial(10));
 
-// 5.
+5.
 console.log("---Palindrome---");
 function palindrome(str) {
   var strCopy = str.split("").reverse().join("");
